@@ -1,0 +1,11 @@
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<%= simple_form_for @owner do |f| %>
+  <%= f.input :first_name, label: 'First Name' %>
+  <%= f.input :last_name, label: 'Last Name'%>
+  <%= f.input :email, label: 'Email' %>
+  <%= f.input :dog_name, label: 'Dog Name'%>
+  <%= f.button :submit, 'Meet Dog Owners' %>
+<% end %>
