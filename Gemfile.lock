@@ -94,6 +94,12 @@ GEM
     rake (10.2.2)
     rdoc (4.1.1)
       json (~> 1.4)
+    remarkable (3.1.13)
+      rspec (>= 1.2.0)
+    rspec (2.14.1)
+      rspec-core (~> 2.14.0)
+      rspec-expectations (~> 2.14.0)
+      rspec-mocks (~> 2.14.0)
     rspec-core (2.14.8)
     rspec-expectations (2.14.5)
       diff-lcs (>= 1.1.3, < 2.0)
@@ -115,6 +121,12 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
+    shoulda (3.5.0)
+      shoulda-context (~> 1.0, >= 1.0.1)
+      shoulda-matchers (>= 1.4.1, < 3.0)
+    shoulda-context (1.1.6)
+    shoulda-matchers (2.5.0)
+      activesupport (>= 3.0.0)
     simple_form (3.0.1)
       actionpack (>= 4.0.0, < 4.1)
       activemodel (>= 4.0.0, < 4.1)
@@ -156,9 +168,11 @@ DEPENDENCIES
   pg
   pry-rails
   rails (= 4.0.4)
+  remarkable
   rspec-rails
   sass-rails (~> 4.0.2)
   sdoc
+  shoulda
   simple_form
   turbolinks
   uglifier (>= 1.3.0)

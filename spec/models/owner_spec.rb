@@ -5,7 +5,7 @@ describe Owner do
     first_name: 'mike',
     last_name:  'boerger',
     email:      'mike@boerger.com',
-    dog_name:   'boergy',
+    dog_name:   Dog.new(dog_name: 'boergy')
     }}
 
     it 'has a first name' do
@@ -33,5 +33,11 @@ describe Owner do
       expect(owner).to_not be_valid
       expect(owner_2).to_not be_valid
       expect(owner_3).to_not be_valid
+    end
+
+    it 'has a dog' do
+      dog = Dog.new(dog_name: "Fay-zahn")
+      owner = Owner.new(valid_attrs.merge(dog_name: dog))
+      expect(owner.dog_name.dog_name).to eq('Fay-zahn')
     end
   end
