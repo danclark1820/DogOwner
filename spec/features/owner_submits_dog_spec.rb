@@ -22,6 +22,7 @@ feature "User submits a dog", %q{
       click_on "Become a Registered Dog Owner"
 
       expect(page).to have_content "Succesfully Registered"
+      expect(page).to have_content "Index of Dog Lovers"
     end
 
     it "does not submit owner with invalid attributes" do

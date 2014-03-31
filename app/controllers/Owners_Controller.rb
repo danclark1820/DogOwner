@@ -16,6 +16,18 @@ class OwnersController < ApplicationController
   end
 
   def show
+    @owner = Owner.find(params[:id])
+    if flash[notice] = "Succesfully Registered"
+      flash[notice] = "Succesfully Registered"
+      redirect_to owners_path
+    end
+  end
+
+  def index
+    @owners = Owner.all
+    if flash[:notice] = "Succesfully Registered"
+      flash[:notice] = "Succesfully Registered"
+    end
   end
 
   def owner_params
